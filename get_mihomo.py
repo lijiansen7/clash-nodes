@@ -4,6 +4,11 @@ import io, os, re, sys, zipfile
 import requests
 import clash_node_tester as t
 
+# 强制 UTF-8 输出, 避免 Windows/GitHub Actions 默认 cp1252 编码导致中文打印崩溃
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 t.GH_PROXY = os.environ.get("GH_PROXY", "https://666.hxlx.eu.org")
 ACC = t.GH_PROXY
 

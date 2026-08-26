@@ -13,6 +13,11 @@ import time
 import urllib.parse
 import uuid
 
+# 强制 UTF-8 输出, 避免 Windows/GitHub Actions 默认 cp1252 编码导致中文打印崩溃
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 sys.path.insert(0, ".")
 import requests
 import yaml
