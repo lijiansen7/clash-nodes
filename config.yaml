@@ -1,0 +1,16 @@
+# Clash Node Tester 配置文件
+# 将原本硬编码的订阅源、规则链接、GitHub加速代理等移出到此处，方便修改
+
+# GitHub 加速代理前缀（留空表示不使用）
+gh_proxy: "https://666.hxlx.eu.org"
+
+# 默认订阅源仓库列表（用于 --discover）
+repos:
+  - "https://github.com/jichangx/free-nodes"
+  - "https://github.com/eclipsebug/Free-servers"
+  - "https://github.com/Au1rxx/free-vpn-subscriptions"
+
+# 默认直接订阅/规则链接（每次必抓，可包含 ACL 规则等）
+#urls:
+#  - "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_AdblockPlus.ini?emoji=true&list=false&tfo=false&scv=true&fdn=false&expand=true&sort=false&new_name=true"
+#  - "https://raw.githubusercontent.com/shaoyouvip/free/refs/heads/main/all.yaml"

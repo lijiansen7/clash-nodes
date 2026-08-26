@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# 缓存与临时文件
+_nodes_cache.pkl
+_mihomo/
+*.log
+
+# mihomo 内核（CI 中自动下载）
+mihomo.exe
+_mihomo_latest.zip
+
+# IDE
+.idea/
+.vscode/
+
+# 系统
+Thumbs.db
+.DS_Store
+
+# 本地测试产物（订阅文件由 CI 生成并提交）
+mihomo_alive_rejected.yaml
